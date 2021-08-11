@@ -1,0 +1,5 @@
+# dependencies
+/node_modules
+
+# Intentionally removing package lock because it has problems when using local file resolutions
+package-lock.json
