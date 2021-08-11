@@ -3,7 +3,7 @@ import { useHistory, Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
 export function Nav() {
-  const { isAuthenticated, user, loginWithRedirect, loginWithPopup, logout } =
+  const { isAuthenticated, user, loginWithRedirect, logout } =
     useAuth0<{
       nickname: string;
     }>();
@@ -51,8 +51,7 @@ export function Nav() {
         <button
           className="btn btn-outline-success"
           id="login"
-          onClick={async () => {
-            await loginWithPopup();
+          onClick={() => {
             loginWithRedirect();
           }}
         >
