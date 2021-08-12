@@ -8,7 +8,6 @@ import { Nav } from "./Nav";
 import { Error } from "./Error";
 import { Loading } from "./Loading";
 import Profile from "./Profile";
-import { ParentComponent } from "./components/ParentComponent";
 import { API_URL } from "./constants";
 import "./App.css";
 
@@ -48,7 +47,6 @@ function App() {
   return (
     <Router history={history}>
       <Nav />
-      <ParentComponent />
       {error && <Error message={error.message} />}
       <div>
         <div className="action-btn">
