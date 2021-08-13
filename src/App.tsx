@@ -8,11 +8,14 @@ import { Nav } from "./Nav";
 import { Error } from "./Error";
 import { Loading } from "./Loading";
 import Profile from "./Profile";
+import { Parent } from "./components/Parent";
 import { API_URL } from "./constants";
 import "./App.css";
 
 // Use `createHashHistory` to use hash routing
 export const history = createBrowserHistory();
+
+
 
 function App() {
   const { isLoading, error, getAccessTokenSilently } = useAuth0();
@@ -47,6 +50,7 @@ function App() {
   return (
     <Router history={history}>
       <Nav />
+      <Parent />
       {error && <Error message={error.message} />}
       <div>
         <div className="action-btn">
